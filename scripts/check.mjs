@@ -29,8 +29,10 @@ const walk = (dir) => {
     if (statSync(p).isDirectory()) walk(p);
     else if (/\.(ts|tsx)$/.test(f)) {
       const txt = readFileSync(p, "utf8");
-      for (const m of txt.matchAll(/source:\s*["']([\w-]+)["']/g)) {
-        if (!used.has(m[1])) used.set(m[1], relative(ROOT, p));
+      for (const m of txt.matchAll(/source:\s*["']([^"']+)["']/g)) {
+        for (const id of m[1].split(";").map((s) => s.trim()).filter(Boolean)) {
+          if (!used.has(id)) used.set(id, relative(ROOT, p));
+        }
       }
     }
   }

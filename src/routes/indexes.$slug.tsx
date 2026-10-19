@@ -24,17 +24,23 @@ export const Route = createFileRoute("/indexes/$slug")({
 });
 
 function SourceRef({ id }: { id: string }) {
-  const s = SOURCES[id];
-  if (!s) return null;
+  const ids = id.split(";").map((s) => s.trim()).filter(Boolean);
   return (
     <sup className="ml-0.5 whitespace-nowrap font-mono text-[0.65rem]">
-      <a
-        href={`/sources#${id}`}
-        className="text-saffron no-underline"
-        title={`${s.title} — ${s.publisher} (${s.year})`}
-      >
-        [{id}]
-      </a>
+      {ids.map((one) => {
+        const s = SOURCES[one];
+        if (!s) return null;
+        return (
+          <a
+            key={one}
+            href={`/sources#${one}`}
+            className="text-saffron no-underline"
+            title={`${s.title} — ${s.publisher} (${s.year})`}
+          >
+            [{one}]
+          </a>
+        );
+      })}
     </sup>
   );
 }

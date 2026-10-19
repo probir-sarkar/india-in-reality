@@ -1110,4 +1110,214 @@ export const SOURCES: Record<string, Source> = {
     year: 2023,
     url: 'https://www.indiatoday.in/india/story/deepak-baij-nakul-nath-dk-suresh-suspended-from-lok-sabha-total-146-now-2478831-2023-12-21',
   },
+
+  "aser2018": {
+    title: 'Annual Status of Education Report (Rural) 2018',
+    publisher: 'ASER Centre / Pratham',
+    year: 2019,
+    url: 'https://asercentre.org/wp-content/uploads/2022/12/ASER-report_2018-1.pdf',
+  },
+
+  "aser2023": {
+    title: 'ASER 2023 \'Beyond Basics\' press release and main findings',
+    publisher: 'ASER Centre / Pratham',
+    year: 2024,
+    url: 'https://asercentre.org/wp-content/uploads/2022/12/ASER-2023-press-release1_English_16-Jan.pdf',
+  },
+
+  "pib_aser2024": {
+    title: 'Annual Status of Education Report (ASER) 2024 — \'Leap in Rural School Enrollment\'',
+    publisher: 'Press Information Bureau, Ministry of Education',
+    year: 2025,
+    url: 'https://pib.gov.in/PressReleseDetailm.aspx?PRID=2099725',
+  },
+
+  "ie_aser2024": {
+    title: 'Sharp gains in reading & math learning levels in schools across states: ASER 2024',
+    publisher: 'The Indian Express',
+    year: 2025,
+    url: 'https://indianexpress.com/article/education/aser-2024-sharp-gains-in-reading-math-learning-levels-in-schools-across-states-since-covid-slump-9804649/',
+  },
+
+  "pib_nss75": {
+    title: 'Key Indicators of Household Social Consumption on Education in India, NSS 75th Round (July 2017–June 2018) — literacy rate 7+ years 77.7%',
+    publisher: 'Press Information Bureau / National Statistical Office',
+    year: 2019,
+    url: 'https://pib.gov.in/Pressreleaseshare.aspx?PRID=1593251',
+  },
+
+  "sansad_pq": {
+    title: 'Lok Sabha Unstarred Question No. 100, \'Low Literacy Rate\', answered 21 July 2025 (PLFS 2023-24 literacy 80.9%)',
+    publisher: 'Parliament of India, Ministry of Education',
+    year: 2025,
+    url: 'https://sansad.in/getFile/loksabhaquestions/annex/185/AU100_a0extZ.pdf?source=pqals',
+  },
+
+  "pib_litfactsheet": {
+    title: 'Literacy for All — India\'s Journey Towards Viksit Bharat (Census 1951–2011 literacy series)',
+    publisher: 'Press Information Bureau, Ministry of Education',
+    year: 2026,
+    url: 'https://www.pib.gov.in/FactsheetDetails.aspx?Id=151049&reg=48&lang=1',
+  },
+
+  "pib_census2027": {
+    title: 'Population Census-2027 to be conducted in two phases along with enumeration of castes (reference date 1 March 2027)',
+    publisher: 'Press Information Bureau, Ministry of Home Affairs',
+    year: 2025,
+    url: 'https://pib.gov.in/PressReleasePage.aspx?PRID=2133845&lang=1&reg=3',
+  },
+
+  "ie_pisa2009": {
+    title: 'Back to PISA after 2009 poor show: how does it assess 15-year-olds?',
+    publisher: 'The Indian Express',
+    year: 2018,
+    url: 'https://indianexpress.com/article/explained/back-to-pisa-after-2009-poor-show-how-does-it-assess-15-year-olds-5349458/',
+  },
+
+  "ie_pisa2019": {
+    title: 'India ends PISA boycott, signs pact with OECD',
+    publisher: 'The Indian Express',
+    year: 2019,
+    url: 'https://indianexpress.com/article/education/india-ends-pisa-boycott-signs-pact-with-oecd-5558547/',
+  },
+
+  "telegraph2020": {
+    title: 'Centre government cries off global test for teenagers (PISA 2022 withdrawal, MoS Annapurna Devi in Lok Sabha; India ranked 73rd of 74 in 2009)',
+    publisher: 'The Telegraph (India)',
+    year: 2020,
+    url: 'https://www.telegraphindia.com/india/central-government-cries-off-global-test-for-teenagers/cid/1875585',
+  },
+
+  "indiatoday2025": {
+    title: 'India may drop out of international student assessment PISA again',
+    publisher: 'India Today',
+    year: 2025,
+    url: 'https://indiatoday.in/education-today/news/story/india-may-drop-out-of-international-student-assessment-pisa-again-2692495-2025-03-12',
+  },
+
+  "pib_nep2020": {
+    title: 'Cabinet Approves National Education Policy 2020',
+    publisher: 'Press Information Bureau, Ministry of Education',
+    year: 2020,
+    url: 'https://pib.gov.in/PressReleasePage.aspx?PRID=1642049&lang=2&reg=48',
+  },
+
+  "pib_aishe2021_22": {
+    title: 'Ministry of Education releases All India Survey on Higher Education (AISHE) 2021-2022 — GER 28.4',
+    publisher: 'Press Information Bureau, Ministry of Education',
+    year: 2024,
+    url: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=1999713',
+  },
+
+  "pib_aishe_fs": {
+    title: 'India\'s Higher Education Sector: A Decade of Growth (GER 23.7% in 2014-15 to 30% in 2023-24; NEP target 50% by 2035)',
+    publisher: 'Press Information Bureau, Ministry of Education',
+    year: 2026,
+    url: 'https://www.pib.gov.in/FactsheetDetails.aspx?Id=150983&lang=1&reg=3%20',
+  },
+
+  "pib_udise": {
+    title: 'UDISE+ 2025-26 Report on School Education in India (dropout rates 2022-23 to 2025-26)',
+    publisher: 'Press Information Bureau, Ministry of Education',
+    year: 2026,
+    url: 'https://pib.gov.in/PressReleasePage.aspx?PRID=2282141',
+  },
+
+  "nfhs5": {
+    title: 'National Family Health Survey (NFHS-5) 2019-21 — India Fact Sheet',
+    publisher: 'International Institute for Population Sciences / Ministry of Health and Family Welfare',
+    year: 2021,
+    url: 'https://rchiips.org/nfhs/NFHS-5_FCTS/INDIA.pdf',
+  },
+
+  "hindu_nuh": {
+    title: 'No classroom, no fans: inside a rural government school in Haryana (Mannaki village, Nuh)',
+    publisher: 'The Hindu (Hanan Zaffar, Danish Pandit)',
+    year: 2026,
+    url: 'https://www.thehindu.com/education/no-classroom-no-fans-inside-a-rural-government-school-in-haryana/article71550342.ece',
+  },
+
+  "wblit": {
+    title: 'World Bank Open Data — Adult literacy rate, population 15+ (SE.ADT.LITR.ZS, UNESCO Institute for Statistics)',
+    publisher: 'World Bank',
+    year: 2024,
+    url: 'https://api.worldbank.org/v2/country/IND/indicator/SE.ADT.LITR.ZS?format=json',
+  },
+
+  "ghi2026": {
+    title: 'Global Hunger Index 2026 — India country page and ranking table',
+    publisher: 'Concern Worldwide / Welthungerhilfe / IFHV',
+    year: 2026,
+    url: 'https://www.globalhungerindex.org/india.html',
+  },
+
+  "ghi2026pdf": {
+    title: 'Global Hunger Index 2026 report (PDF; India indicator table and appendix)',
+    publisher: 'Concern Worldwide / Welthungerhilfe / IFHV',
+    year: 2026,
+    url: 'https://www.globalhungerindex.org/pdf/en/2026.pdf',
+  },
+
+  "ghi_methodology": {
+    title: 'Global Hunger Index — Methodology',
+    publisher: 'Concern Worldwide / Welthungerhilfe / IFHV',
+    year: 2026,
+    url: 'https://www.globalhungerindex.org/methodology.html',
+  },
+
+  "ndtv2026": {
+    title: 'India\'s Hunger Score Improves, But Child \'Wasting\' Remains High (GHI 2026 released October 14)',
+    publisher: 'NDTV',
+    year: 2026,
+    url: 'https://www.ndtv.com/india-news/indias-hunger-score-improves-but-child-wasting-remains-high-12192134',
+  },
+
+  "pib_ghi2022": {
+    title: 'Global Hunger Report 2022 — The index is an erroneous measure of hunger and suffers from serious methodological issues (15 Oct 2022)',
+    publisher: 'Press Information Bureau, Ministry of Women and Child Development',
+    year: 2022,
+    url: 'https://pib.gov.in/PressReleasePage.aspx?PRID=1868103',
+  },
+
+  "pib_ghi2023": {
+    title: 'Measurement of over 7 Crore children shows wasting at about one-third of that used in Global Hunger Index (12 Oct 2023)',
+    publisher: 'Press Information Bureau, Ministry of Women and Child Development',
+    year: 2023,
+    url: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=1967164',
+  },
+
+  "hindu2024": {
+    title: 'What does the Global Hunger Index 2024 state about India? Explained (India 105th of 127, score 27.3)',
+    publisher: 'The Hindu',
+    year: 2024,
+    url: 'https://www.thehindu.com/news/national/what-does-the-global-hunger-index-2024-state-about-india/article68762149.ece',
+  },
+
+  "reuters2017": {
+    title: 'Death of 11-year-old in India sparks debate on tying welfare to identity card',
+    publisher: 'Reuters',
+    year: 2017,
+    url: 'https://www.reuters.com/article/world/death-of-11-year-old-in-india-sparks-debate-on-tying-welfare-to-identity-card-idUSKBN1CN286',
+  },
+
+  "scroll2017": {
+    title: 'Denied food because she did not have an Aadhaar-linked ration card, Jharkhand girl dies of starvation (Santoshi Kumari, Simdega)',
+    publisher: 'Scroll.in (Aarefa Johari)',
+    year: 2017,
+    url: 'https://scroll.in/article/854225/denied-food-because-she-did-not-have-aadhaar-linked-ration-card-jharkhand-girl-dies-of-starvation',
+  },
+
+  "scroll2018": {
+    title: 'Remembering Santoshi Kumari: A year after Jharkhand girl\'s death, Aadhaar tragedies are on the rise',
+    publisher: 'Scroll.in (Aarefa Johari)',
+    year: 2018,
+    url: 'https://scroll.in/article/895667/a-year-after-jharkhand-girl-died-of-starvation-aadhaar-tragedies-are-on-the-rise',
+  },
+
+  "ht2017": {
+    title: '11-year-old \'starving\' Simdega girl died of malaria, says deputy commissioner',
+    publisher: 'Hindustan Times',
+    year: 2017,
+    url: 'https://www.hindustantimes.com/india-news/11-year-old-starving-simdega-girl-died-of-malaria-says-deputy-commissioner/story-ut8bQ8Y7RGLXEfGM6KKBQO.html',
+  },
 };
