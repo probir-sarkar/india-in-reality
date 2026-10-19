@@ -1,0 +1,135 @@
+[
+  {
+    "id": "iipsnfhs5",
+    "title": "National Family Health Survey (NFHS-5) 2019-21: India Report",
+    "publisher": "International Institute for Population Sciences / MoHFW",
+    "year": 2021,
+    "url": "https://rchiips.org/nfhs/NFHS-5Reports/NFHS-5_INDIA_REPORT.pdf"
+  },
+  {
+    "id": "dhsphases",
+    "title": "National Family Health Survey (NFHS-5) 2019-21 \u2014 India Report FR375 (survey phases and dates)",
+    "publisher": "The DHS Program (ICF)",
+    "year": 2021,
+    "url": "https://dhsprogram.com/pubs/pdf/FR375/FR375.pdf"
+  },
+  {
+    "id": "pib2023nut",
+    "title": "Steady improvement in indicators for malnutrition \u2014 stunting 38.4%\u219235.5%, wasting 21.0%\u219219.3% (Rajya Sabha written reply, 20 Dec 2023)",
+    "publisher": "PIB, Ministry of Women and Child Development",
+    "year": 2023,
+    "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?lang=2&PRID=1988614&reg=48"
+  },
+  {
+    "id": "dh2021",
+    "title": "57% women of reproductive age and over 67% kids under five years anaemic, health survey finds (25 Nov 2021)",
+    "publisher": "Deccan Herald",
+    "year": 2021,
+    "url": "https://www.deccanherald.com/india/57-women-of-reproductive-age-and-over-67-kids-under-five-years-anaemic-health-survey-finds-report-1054314.html"
+  },
+  {
+    "id": "ie2021anaemia",
+    "title": "More Indians are anaemic than before, 67% children under 5 affected: NFHS-5",
+    "publisher": "Indian Express",
+    "year": 2021,
+    "url": "https://indianexpress.com/article/cities/pune/more-indians-are-anaemic-than-before-67-pc-children-under-5-affected-nfhs-5-7914613/"
+  },
+  {
+    "id": "nhsrcnha",
+    "title": "National Health Accounts Estimates for India 2021-22",
+    "publisher": "National Health Systems Resource Centre, MoHFW",
+    "year": 2024,
+    "url": "https://nhsrcindia.org/sites/default/files/2024-09/NHA%202021-22.pdf"
+  },
+  {
+    "id": "pib2024oope",
+    "title": "Steps taken by the Government to reduce Out-of-Pocket Health Expenditure \u2014 OOPE 48.8% (2017-18) to 39.4% (2021-22); PM-JAY 55 crore beneficiaries (13 Dec 2024)",
+    "publisher": "PIB, Ministry of Health and Family Welfare",
+    "year": 2024,
+    "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2084188"
+  },
+  {
+    "id": "pib2025hex",
+    "title": "Measures taken to reduce healthcare costs \u2014 OOPE declined from 62.6% in 2014-15 to 39.4%; GHE up from 29.0% to 48.0% of THE (FY2015\u2013FY2022)",
+    "publisher": "PIB, Ministry of Health and Family Welfare",
+    "year": 2025,
+    "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2114761&reg=48&lang=2"
+  },
+  {
+    "id": "pib2025doc",
+    "title": "Update on Medical Education in India \u2014 doctor-population ratio 1:811 (allopathic + AYUSH, 80% availability), 2 Dec 2025",
+    "publisher": "PIB, Ministry of Health and Family Welfare",
+    "year": 2025,
+    "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2197614"
+  },
+  {
+    "id": "itoday2025",
+    "title": "India's 1:811 doctor-population ratio is great on paper but rural reality is another story (4 Dec 2025)",
+    "publisher": "India Today",
+    "year": 2025,
+    "url": "https://indiatoday.in/amp/education-today/featurephilia/story/indias-1811-doctor-population-ratio-rural-healthcare-problems-2830192-2025-12-04"
+  },
+  {
+    "id": "federal2025",
+    "title": "Doctor-population ratio 1:811: the AYUSH-inclusive government claim examined",
+    "publisher": "The Federal",
+    "year": 2025,
+    "url": "https://thefederal.com/category/health/doctor-patient-ratio-india-ayush-claim-219350"
+  },
+  {
+    "id": "censussrs",
+    "title": "Sample Registration System: Abridged Life Tables 2016-2020",
+    "publisher": "Office of the Registrar General & Census Commissioner, India",
+    "year": 2022,
+    "url": "https://censusindia.gov.in/nada/index.php/catalog/44377/download/48050/SRS-Abridged_Life_Tables_2016-2020.pdf"
+  },
+  {
+    "id": "thewire2023",
+    "title": "Covid-19 led to decline in life expectancy in India, reveal three analyses (SRS 2016-20: 70 years)",
+    "publisher": "The Wire",
+    "year": 2023,
+    "url": "https://thewire.in/health/covid-19-led-to-decline-in-life-expectancy-in-india-reveal-three-analyses"
+  },
+  {
+    "id": "worldbank",
+    "title": "Life expectancy at birth, total (years) \u2014 India (SP.DYN.LE00.IN), via World Bank API",
+    "publisher": "World Bank",
+    "year": 2024,
+    "url": "https://api.worldbank.org/v2/country/IND/indicator/SP.DYN.LE00.IN?format=json&date=2014:2023"
+  },
+  {
+    "id": "worldbankpeers",
+    "title": "Life expectancy at birth, total (years) \u2014 CHN, LKA, BRA, BGD, NPL, PAK, USA, GBR (SP.DYN.LE00.IN), via World Bank API",
+    "publisher": "World Bank",
+    "year": 2024,
+    "url": "https://api.worldbank.org/v2/country/CHN;LKA;BRA;BGD;NPL;PAK;USA;GBR/indicator/SP.DYN.LE00.IN?format=json&date=2021:2023"
+  },
+  {
+    "id": "pib2024pmjay",
+    "title": "AB PM-JAY status \u2014 ~36 crore beneficiaries verified; 8.39 crore hospital admissions worth over \u20b91.16 lakh crore as of 30.11.2024",
+    "publisher": "PIB / National Health Authority",
+    "year": 2024,
+    "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2086513"
+  },
+  {
+    "id": "pib2026pmjay",
+    "title": "Arogya Manthan 2026: PM-JAY covers over 60 crore beneficiaries, facilitates more than 13 crore hospital admissions worth over \u20b92 lakh crore",
+    "publisher": "PIB / National Health Authority",
+    "year": 2026,
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2314404"
+  },
+  {
+    "id": "bmj2023",
+    "title": "Public health insurance coverage in India before and after PM-JAY: repeated cross-sectional analysis of nationally representative survey data (BMJ Global Health 2023;8:e012725)",
+    "publisher": "BMJ Global Health",
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10462969"
+  },
+  {
+    "id": "indiaspend2023",
+    "title": "Debt, distress sales: How Indians pay for healthcare (Ghazala/Imran, Tatanagar; Khadeeja Bano, Mumbra)",
+    "publisher": "IndiaSpend",
+    "year": 2023,
+    "url": "https://indiaspend.com/health/debt-distress-sales-how-indians-pay-for-healthcare-857077"
+  }
+]
