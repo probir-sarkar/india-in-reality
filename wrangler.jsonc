@@ -8,7 +8,7 @@
   "preview_urls": false,
   "routes": [
     {
-      "pattern": "india-in-reality.browserstay.com",
+      "pattern": "inr.probir.dev",
       "custom_domain": true
     }
   ],
