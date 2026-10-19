@@ -37,12 +37,22 @@ function DonateHi() {
 
         <div className="chart-frame mt-8 max-w-xl p-6">
           <p className="kicker">UPI — सबसे आसान तरीका</p>
-          <p className="mt-2 text-sm text-ink-soft">
-            किसी भी UPI ऐप से स्कैन कीजिए, या इसी ID पर भेजिए:
-          </p>
-          <p className="mt-3 rounded-md bg-paper-2 px-4 py-3 font-mono text-lg font-semibold tracking-wide text-ink">
-            probirsarkarjio@ybl
-          </p>
+          <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row sm:items-center">
+            <img
+              src="/upi-qr.png"
+              alt="UPI QR कोड — Probir Sarkar"
+              width={200}
+              className="rounded-md border border-line"
+            />
+            <div>
+              <p className="text-sm text-ink-soft">
+                किसी भी UPI ऐप — PhonePe, GPay, Paytm — से स्कैन कीजिए, या इसी ID पर भेजिए:
+              </p>
+              <p className="mt-3 rounded-md bg-paper-2 px-4 py-3 font-mono text-lg font-semibold tracking-wide text-ink">
+                probirsarkarjio@ybl
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="prose-block mt-8 max-w-2xl text-[0.98rem] text-ink-soft">
