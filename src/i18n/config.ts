@@ -31,8 +31,11 @@ const resources = {
       latest: "Latest",
       asOf: "As of",
       source: "Source",
+      navDonate: "Donate",
       footerBiblio: "the bibliography",
       footerEvery: "Every figure on this site carries a public source; see ",
+      footerIndependent:
+        "An independent project by Probir Sarkar, built with the help of AI. Sources are public, but not every source is independently verified — corrections are welcome.",
       aboutTitle: "Rankings are arguments. Read the argument.",
       sourcesTitle: "Sources",
       sourcesIntro:
@@ -66,8 +69,11 @@ const resources = {
       latest: "नवीनतम",
       asOf: "आँकड़े",
       source: "स्रोत",
+      navDonate: "सहयोग करें",
       footerBiblio: "ग्रंथसूची",
       footerEvery: "इस साइट का हर आंकड़ा एक सार्वजनिक स्रोत से जुड़ा है; देखें ",
+      footerIndependent:
+        "प्रोबिर सरकार की एक स्वतंत्र परियोजना, जिसमें AI की मदद ली गई है। स्रोत सार्वजनिक हैं, पर हर स्रोत की स्वतंत्र जाँच नहीं हुई है — सुधार के सुझाव स्वागत योग्य हैं।",
       aboutTitle: "रैंकिंग एक तर्क है। तर्क को पढ़िए।",
       sourcesTitle: "स्रोत",
       sourcesIntro:

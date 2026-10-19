@@ -11,9 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as DonateRouteImport } from './routes/donate'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as HiIndexRouteImport } from './routes/hi/index'
 import { Route as HiAboutRouteImport } from './routes/hi/about'
+import { Route as HiDonateRouteImport } from './routes/hi/donate'
 import { Route as HiSourcesRouteImport } from './routes/hi/sources'
 import { Route as IndexesSlugRouteImport } from './routes/indexes.$slug'
 import { Route as HiIndexesSlugRouteImport } from './routes/hi/indexes.$slug'
@@ -26,6 +28,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DonateRoute = DonateRouteImport.update({
+  id: '/donate',
+  path: '/donate',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SourcesRoute = SourcesRouteImport.update({
@@ -41,6 +48,11 @@ const HiIndexRoute = HiIndexRouteImport.update({
 const HiAboutRoute = HiAboutRouteImport.update({
   id: '/hi/about',
   path: '/hi/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HiDonateRoute = HiDonateRouteImport.update({
+  id: '/hi/donate',
+  path: '/hi/donate',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HiSourcesRoute = HiSourcesRouteImport.update({
@@ -62,8 +74,10 @@ const HiIndexesSlugRoute = HiIndexesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/donate': typeof DonateRoute
   '/sources': typeof SourcesRoute
   '/hi/about': typeof HiAboutRoute
+  '/hi/donate': typeof HiDonateRoute
   '/hi/sources': typeof HiSourcesRoute
   '/indexes/$slug': typeof IndexesSlugRoute
   '/hi/': typeof HiIndexRoute
@@ -72,8 +86,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/donate': typeof DonateRoute
   '/sources': typeof SourcesRoute
   '/hi/about': typeof HiAboutRoute
+  '/hi/donate': typeof HiDonateRoute
   '/hi/sources': typeof HiSourcesRoute
   '/indexes/$slug': typeof IndexesSlugRoute
   '/hi': typeof HiIndexRoute
@@ -83,8 +99,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/donate': typeof DonateRoute
   '/sources': typeof SourcesRoute
   '/hi/about': typeof HiAboutRoute
+  '/hi/donate': typeof HiDonateRoute
   '/hi/sources': typeof HiSourcesRoute
   '/indexes/$slug': typeof IndexesSlugRoute
   '/hi/': typeof HiIndexRoute
@@ -95,8 +113,10 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/donate'
     | '/sources'
     | '/hi/about'
+    | '/hi/donate'
     | '/hi/sources'
     | '/indexes/$slug'
     | '/hi/'
@@ -105,8 +125,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/donate'
     | '/sources'
     | '/hi/about'
+    | '/hi/donate'
     | '/hi/sources'
     | '/indexes/$slug'
     | '/hi'
@@ -115,8 +137,10 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/donate'
     | '/sources'
     | '/hi/about'
+    | '/hi/donate'
     | '/hi/sources'
     | '/indexes/$slug'
     | '/hi/'
@@ -126,8 +150,10 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  DonateRoute: typeof DonateRoute
   SourcesRoute: typeof SourcesRoute
   HiAboutRoute: typeof HiAboutRoute
+  HiDonateRoute: typeof HiDonateRoute
   HiSourcesRoute: typeof HiSourcesRoute
   IndexesSlugRoute: typeof IndexesSlugRoute
   HiIndexRoute: typeof HiIndexRoute
@@ -150,6 +176,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/donate': {
+      id: '/donate'
+      path: '/donate'
+      fullPath: '/donate'
+      preLoaderRoute: typeof DonateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sources': {
       id: '/sources'
       path: '/sources'
@@ -169,6 +202,13 @@ declare module '@tanstack/react-router' {
       path: '/hi/about'
       fullPath: '/hi/about'
       preLoaderRoute: typeof HiAboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hi/donate': {
+      id: '/hi/donate'
+      path: '/hi/donate'
+      fullPath: '/hi/donate'
+      preLoaderRoute: typeof HiDonateRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hi/sources': {
@@ -198,8 +238,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  DonateRoute: DonateRoute,
   SourcesRoute: SourcesRoute,
   HiAboutRoute: HiAboutRoute,
+  HiDonateRoute: HiDonateRoute,
   HiSourcesRoute: HiSourcesRoute,
   IndexesSlugRoute: IndexesSlugRoute,
   HiIndexRoute: HiIndexRoute,

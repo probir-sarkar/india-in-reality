@@ -5,24 +5,24 @@
   --font-serif: "Source Serif 4", Georgia, serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
-  /* Ink: indigo-dye black. Paper: handmade sheet. */
+  /* Background: clean white. Ink: deep indigo-black. */
   --color-ink: #20263a;
   --color-ink-soft: #4c5570;
   --color-faint: #8b91a8;
-  --color-paper: #f6f1e4;
-  --color-paper-2: #ece4d0;
-  --color-line: #d8cfba;
-  --color-line-strong: #c2b79c;
+  --color-paper: #ffffff;
+  --color-paper-2: #f6f4ee;
+  --color-line: #e3ded2;
+  --color-line-strong: #cfc8b8;
 
-  /* Accents from Indian material culture. */
-  --color-saffron: #d97b26; /* marigold / saffron */
-  --color-marigold: #e8a020;
-  --color-leaf: #2e7d5b; /* peacock green */
-  --color-alarm: #b23a3a; /* sindoor red */
-  --color-indigo-ink: #3b4a8c; /* indigo dye */
-  --color-teal: #0f766e; /* peacock teal */
+  /* Accents: saffron and India green, with supporting hues. */
+  --color-saffron: #e07b26;
+  --color-marigold: #f0a028;
+  --color-leaf: #1c7a4f; /* India green */
+  --color-alarm: #b23a3a;
+  --color-indigo-ink: #3b4a8c;
+  --color-teal: #0f766e;
 
-  --color-brand: #d97b26;
+  --color-brand: #e07b26;
 }
 
 html {
@@ -34,6 +34,20 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Tricolour hairline: saffron, white, green — one thin stripe at the top. */
+.tricolour {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-saffron) 0%,
+    var(--color-saffron) 33.3%,
+    #ffffff 33.3%,
+    #ffffff 66.6%,
+    var(--color-leaf) 66.6%,
+    var(--color-leaf) 100%
+  );
 }
 
 /* Editorial hairline rules instead of heavy boxes. */
@@ -74,7 +88,7 @@ body {
 .chart-frame {
   border: 1px solid var(--color-line);
   border-radius: 10px;
-  background: #fbf7ec;
+  background: #ffffff;
 }
 
 /* Devanagari accent for the wordmark and heroes. */
@@ -82,24 +96,42 @@ body {
   font-family: "Tiro Devanagari Hindi", "Noto Serif Devanagari", serif;
 }
 
-/* Cards: warm sheet with a marigold lift on hover. */
+/* Cards: white sheet with a green lift on hover. */
 .card-sheet {
-  background: #fbf7ec;
+  background: #ffffff;
   border: 1px solid var(--color-line);
   border-radius: 10px;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 .card-sheet:hover {
   transform: translateY(-2px);
-  border-color: var(--color-marigold);
-  box-shadow: 5px 5px 0 var(--color-line);
+  border-color: var(--color-leaf);
+  box-shadow: 5px 5px 0 var(--color-paper-2);
 }
 
-/* Hero underline: a short marigold stroke, hand-set feel. */
+/* Hero underline: a short tricolour stroke. */
 .hero-stroke {
   display: inline-block;
-  width: 84px;
+  width: 110px;
   height: 5px;
   border-radius: 3px;
-  background: linear-gradient(90deg, var(--color-saffron), var(--color-marigold));
+  background: linear-gradient(90deg, var(--color-saffron) 0 33%, #e8e5dc 33% 66%, var(--color-leaf) 66% 100%);
+}
+
+/* Donate / primary button. */
+.btn-saffron {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-saffron);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.55rem 1.1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.btn-saffron:hover {
+  background: var(--color-marigold);
 }
