@@ -41,11 +41,11 @@ export function TrendChart({
         />
         <YAxis
           domain={[Math.max(0, Math.min(...values) - pad), Math.max(...values) + pad]}
-          tick={{ fill: MUTED, fontSize: 12 }}
+          tick={{ fill: MUTED, fontSize: 11 }}
           tickLine={false}
           axisLine={false}
-          width={56}
-          unit={unit}
+          width={76}
+          tickFormatter={(v: number) => `${Number(v.toFixed(1))}`}
         />
         <Tooltip
           contentStyle={{

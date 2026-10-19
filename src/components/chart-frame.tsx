@@ -1,17 +1,11 @@
 import { useEffect, useState, type ReactNode } from "react";
+import { motion } from "motion/react";
 
 /**
- * Recharts measures its container with a hidden clone, which renders nothing
- * useful during prerender. Charts mount client-side only; the frame, the
- * takeaway line and the source footnote stay server-rendered so the page is
- * never blank without JS.
+ * Chart frames: the frame, takeaway line and source footnote are
+ * server-rendered; the chart itself mounts client-side (Recharts measures its
+ * container in JS) and settles in with a short motion fade-rise.
  */
-export function useMounted() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  return mounted;
-}
-
 export function ChartFrame({
   title,
   takeaway,
@@ -25,17 +19,26 @@ export function ChartFrame({
   children: ReactNode;
   height?: number;
 }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   return (
-    <figure className="chart-frame my-8 p-5">
+    <figure className="chart-frame my-8 overflow-hidden p-5">
       <figcaption>
         <p className="kicker">{title}</p>
         <p className="mt-1 font-serif text-lg leading-snug text-ink">{takeaway}</p>
       </figcaption>
-      <div style={{ height }} className="mt-4">
-        {useMounted() ? (
-          children
+      <div style={{ minHeight: height }} className="mt-4">
+        {mounted ? (
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            style={{ height }}
+          >
+            {children}
+          </motion.div>
         ) : (
-          <p className="pt-16 text-center text-sm text-faint">Loading chart…</p>
+          <div style={{ height }} />
         )}
       </div>
       <p className="mt-3 text-xs text-faint">Source: {source}</p>

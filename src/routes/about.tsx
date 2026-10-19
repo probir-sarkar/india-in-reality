@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <>
-      <Header />
+      <Header lang="en" />
       <main className="mx-auto max-w-4xl px-5 py-14">
         <p className="kicker">About</p>
         <h1 className="mt-2 font-serif text-4xl">Rankings are arguments. Read the argument.</h1>
@@ -49,7 +49,7 @@ function About() {
           </p>
         </div>
       </main>
-      <Footer />
+      <Footer lang="en" />
     </>
   );
 }

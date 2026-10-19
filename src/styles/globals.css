@@ -5,16 +5,24 @@
   --font-serif: "Source Serif 4", Georgia, serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
-  --color-ink: #1b2631;
-  --color-ink-soft: #51606d;
-  --color-faint: #8494a1;
-  --color-paper: #faf8f3;
-  --color-paper-2: #f1ede3;
-  --color-line: #ddd6c8;
-  --color-saffron: #c96f2e;
-  --color-leaf: #2e7d5b;
-  --color-alarm: #b23a3a;
-  --color-indigo-ink: #3454a5;
+  /* Ink: indigo-dye black. Paper: handmade sheet. */
+  --color-ink: #20263a;
+  --color-ink-soft: #4c5570;
+  --color-faint: #8b91a8;
+  --color-paper: #f6f1e4;
+  --color-paper-2: #ece4d0;
+  --color-line: #d8cfba;
+  --color-line-strong: #c2b79c;
+
+  /* Accents from Indian material culture. */
+  --color-saffron: #d97b26; /* marigold / saffron */
+  --color-marigold: #e8a020;
+  --color-leaf: #2e7d5b; /* peacock green */
+  --color-alarm: #b23a3a; /* sindoor red */
+  --color-indigo-ink: #3b4a8c; /* indigo dye */
+  --color-teal: #0f766e; /* peacock teal */
+
+  --color-brand: #d97b26;
 }
 
 html {
@@ -33,13 +41,29 @@ body {
   border-top: 1px solid var(--color-line);
 }
 
-/* Numbered section markers, like after-ai's tests. */
+/* Jaali divider: a thin band of pierced-screen dots. */
+.jaali {
+  height: 7px;
+  background-image: radial-gradient(circle, var(--color-line-strong) 1.4px, transparent 1.6px);
+  background-size: 14px 7px;
+  background-position: center;
+  opacity: 0.7;
+}
+
+/* Numbered section markers, in the manner of ledger headings. */
 .kicker {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-faint);
+}
+.kicker::before {
+  content: "◆";
+  margin-right: 0.5em;
+  font-size: 0.6em;
+  vertical-align: 0.12em;
+  color: var(--color-saffron);
 }
 
 .prose-block p {
@@ -50,5 +74,32 @@ body {
 .chart-frame {
   border: 1px solid var(--color-line);
   border-radius: 10px;
-  background: #fffdf8;
+  background: #fbf7ec;
+}
+
+/* Devanagari accent for the wordmark and heroes. */
+.dev {
+  font-family: "Tiro Devanagari Hindi", "Noto Serif Devanagari", serif;
+}
+
+/* Cards: warm sheet with a marigold lift on hover. */
+.card-sheet {
+  background: #fbf7ec;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.card-sheet:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-marigold);
+  box-shadow: 5px 5px 0 var(--color-line);
+}
+
+/* Hero underline: a short marigold stroke, hand-set feel. */
+.hero-stroke {
+  display: inline-block;
+  width: 84px;
+  height: 5px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--color-saffron), var(--color-marigold));
 }

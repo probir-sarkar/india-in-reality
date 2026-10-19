@@ -1,31 +1,86 @@
 import { SITE } from "@/lib/site";
+import { tr, langPath } from "@/i18n/config";
 
-export function Header() {
+const LANGS = [
+  { code: "en" as const, label: "EN" },
+  { code: "hi" as const, label: "हिं" },
+];
+
+/** A 12-spoke wheel mark — chakra-adjacent, deliberately not the flag's. */
+export function WheelMark({ className = "size-6" }: { className?: string }) {
+  const spokes = Array.from({ length: 12 }, (_, i) => (i * 360) / 12);
   return (
-    <header className="border-b border-line">
-      <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
-        <a href="/" className="no-underline">
-          <span className="font-mono text-xs tracking-[0.18em] uppercase text-faint">
-            {SITE.name}
+    <svg viewBox="0 0 32 32" className={className} aria-hidden="true">
+      <circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" strokeWidth="2.2" />
+      {spokes.map((deg) => {
+        const rad = (deg * Math.PI) / 180;
+        return (
+          <line
+            key={deg}
+            x1={16 + 3.2 * Math.cos(rad)}
+            y1={16 + 3.2 * Math.sin(rad)}
+            x2={16 + 13.2 * Math.cos(rad)}
+            y2={16 + 13.2 * Math.sin(rad)}
+            stroke="currentColor"
+            strokeWidth="1.4"
+          />
+        );
+      })}
+    </svg>
+  );
+}
+
+export function Header({ lang = "en" }: { lang?: "en" | "hi" }) {
+  const t = tr(lang);
+  return (
+    <header className="border-b border-line bg-[#f9f4e8]">
+      <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-3.5">
+        <a href={langPath(lang, "/")} className="flex items-center gap-2.5 no-underline text-ink">
+          <WheelMark className="size-7 text-indigo-ink" />
+          <span className="flex flex-col leading-none">
+            <span className="font-mono text-[0.72rem] tracking-[0.2em] uppercase text-faint">
+              India in Reality
+            </span>
+            <span className="dev mt-0.5 text-sm text-saffron">इंडिया इन रियलिटी</span>
           </span>
         </a>
-        <nav className="flex gap-5 text-sm text-ink-soft">
-          <a href="/" className="no-underline hover:text-ink">Indexes</a>
-          <a href="/about" className="no-underline hover:text-ink">About</a>
-          <a href="/sources" className="no-underline hover:text-ink">Sources</a>
-        </nav>
+        <div className="flex items-center gap-5">
+          <nav className="flex gap-5 text-sm text-ink-soft">
+            <a href={langPath(lang, "/")} className="no-underline hover:text-ink">{t.navIndexes}</a>
+            <a href={langPath(lang, "/about")} className="no-underline hover:text-ink">{t.navAbout}</a>
+            <a href={langPath(lang, "/sources")} className="no-underline hover:text-ink">{t.navSources}</a>
+          </nav>
+          <div className="flex items-center gap-1 rounded-full border border-line px-1 py-0.5 font-mono text-xs">
+            {LANGS.map((l) => (
+              <a
+                key={l.code}
+                href={langPath(l.code, "/")}
+                aria-current={l.code === lang ? "true" : undefined}
+                className={
+                  l.code === lang
+                    ? "rounded-full bg-ink px-2 py-0.5 no-underline text-paper"
+                    : "px-2 py-0.5 no-underline text-faint hover:text-ink"
+                }
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </header>
   );
 }
 
-export function Footer() {
+export function Footer({ lang = "en" }: { lang?: "en" | "hi" }) {
+  const t = tr(lang);
   return (
-    <footer className="rule mt-20">
+    <footer className="mt-20">
+      <div className="jaali" />
       <div className="mx-auto max-w-4xl px-5 py-10 text-sm text-faint">
         <p>
-          {SITE.name} — {SITE.tagline}. Every figure on this site carries a public
-          source; see <a href="/sources" className="text-saffron underline">the bibliography</a>.
+          {SITE.name} — {t.navIndexes}: {SITE.tagline}. {t.footerEvery}
+          <a href={langPath(lang, "/sources")} className="text-saffron underline">{t.footerBiblio}</a>.
         </p>
         <p className="mt-2">
           Part of <a href="https://browserstay.com/" className="underline">BrowserStay</a>

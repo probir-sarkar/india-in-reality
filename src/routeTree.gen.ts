@@ -12,7 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SourcesRouteImport } from './routes/sources'
+import { Route as HiIndexRouteImport } from './routes/hi/index'
+import { Route as HiAboutRouteImport } from './routes/hi/about'
+import { Route as HiSourcesRouteImport } from './routes/hi/sources'
 import { Route as IndexesSlugRouteImport } from './routes/indexes.$slug'
+import { Route as HiIndexesSlugRouteImport } from './routes/hi/indexes.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -29,9 +33,29 @@ const SourcesRoute = SourcesRouteImport.update({
   path: '/sources',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HiIndexRoute = HiIndexRouteImport.update({
+  id: '/hi/',
+  path: '/hi/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HiAboutRoute = HiAboutRouteImport.update({
+  id: '/hi/about',
+  path: '/hi/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HiSourcesRoute = HiSourcesRouteImport.update({
+  id: '/hi/sources',
+  path: '/hi/sources',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexesSlugRoute = IndexesSlugRouteImport.update({
   id: '/indexes/$slug',
   path: '/indexes/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HiIndexesSlugRoute = HiIndexesSlugRouteImport.update({
+  id: '/hi/indexes/$slug',
+  path: '/hi/indexes/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -39,34 +63,75 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/sources': typeof SourcesRoute
+  '/hi/about': typeof HiAboutRoute
+  '/hi/sources': typeof HiSourcesRoute
   '/indexes/$slug': typeof IndexesSlugRoute
+  '/hi/': typeof HiIndexRoute
+  '/hi/indexes/$slug': typeof HiIndexesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/sources': typeof SourcesRoute
+  '/hi/about': typeof HiAboutRoute
+  '/hi/sources': typeof HiSourcesRoute
   '/indexes/$slug': typeof IndexesSlugRoute
+  '/hi': typeof HiIndexRoute
+  '/hi/indexes/$slug': typeof HiIndexesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/sources': typeof SourcesRoute
+  '/hi/about': typeof HiAboutRoute
+  '/hi/sources': typeof HiSourcesRoute
   '/indexes/$slug': typeof IndexesSlugRoute
+  '/hi/': typeof HiIndexRoute
+  '/hi/indexes/$slug': typeof HiIndexesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/sources' | '/indexes/$slug'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/sources'
+    | '/hi/about'
+    | '/hi/sources'
+    | '/indexes/$slug'
+    | '/hi/'
+    | '/hi/indexes/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/sources' | '/indexes/$slug'
-  id: '__root__' | '/' | '/about' | '/sources' | '/indexes/$slug'
+  to:
+    | '/'
+    | '/about'
+    | '/sources'
+    | '/hi/about'
+    | '/hi/sources'
+    | '/indexes/$slug'
+    | '/hi'
+    | '/hi/indexes/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/sources'
+    | '/hi/about'
+    | '/hi/sources'
+    | '/indexes/$slug'
+    | '/hi/'
+    | '/hi/indexes/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   SourcesRoute: typeof SourcesRoute
+  HiAboutRoute: typeof HiAboutRoute
+  HiSourcesRoute: typeof HiSourcesRoute
   IndexesSlugRoute: typeof IndexesSlugRoute
+  HiIndexRoute: typeof HiIndexRoute
+  HiIndexesSlugRoute: typeof HiIndexesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -92,11 +157,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hi/': {
+      id: '/hi/'
+      path: '/hi'
+      fullPath: '/hi/'
+      preLoaderRoute: typeof HiIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hi/about': {
+      id: '/hi/about'
+      path: '/hi/about'
+      fullPath: '/hi/about'
+      preLoaderRoute: typeof HiAboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hi/sources': {
+      id: '/hi/sources'
+      path: '/hi/sources'
+      fullPath: '/hi/sources'
+      preLoaderRoute: typeof HiSourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/indexes/$slug': {
       id: '/indexes/$slug'
       path: '/indexes/$slug'
       fullPath: '/indexes/$slug'
       preLoaderRoute: typeof IndexesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hi/indexes/$slug': {
+      id: '/hi/indexes/$slug'
+      path: '/hi/indexes/$slug'
+      fullPath: '/hi/indexes/$slug'
+      preLoaderRoute: typeof HiIndexesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -106,7 +199,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   SourcesRoute: SourcesRoute,
+  HiAboutRoute: HiAboutRoute,
+  HiSourcesRoute: HiSourcesRoute,
   IndexesSlugRoute: IndexesSlugRoute,
+  HiIndexRoute: HiIndexRoute,
+  HiIndexesSlugRoute: HiIndexesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
