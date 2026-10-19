@@ -9,7 +9,7 @@ import { pressFreedom } from "./press-freedom";
 import { democracy } from "./democracy";
 import { environment } from "./environment";
 import { inequality } from "./inequality";
-import { sampleIndex } from "./sample";
+import { iphone } from "./iphone";
 
 export const INDEXES: IndexPage[] = [
   airQuality,
@@ -22,5 +22,5 @@ export const INDEXES: IndexPage[] = [
   democracy,
   environment,
   happiness,
-  sampleIndex,
+  iphone,
 ];
