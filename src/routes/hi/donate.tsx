@@ -55,18 +55,20 @@ function DonateHi() {
           </div>
         </div>
 
+        <div className="mt-8">
+          <a
+            className="btn-saffron"
+            href="https://razorpay.me/@probirme"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            कार्ड / UPI से सहयोग — Razorpay
+          </a>
+        </div>
+
         <div className="prose-block mt-8 max-w-2xl text-[0.98rem] text-ink-soft">
           <p>
-            भारत के बाहर से?{" "}
-            <a
-              className="text-saffron underline"
-              href="https://github.com/sponsors/probir-sarkar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Sponsors
-            </a>{" "}
-            किसी भी कार्ड से चलता है, या{" "}
+            सीधा ट्रांसफ़र पसंद है? ऊपर दी गई UPI ID किसी भी भारतीय ऐप से चलेगी, या{" "}
             <a className="underline" href="mailto:me@probirsarkar.com">me@probirsarkar.com</a> पर लिखिए —
             कोई न कोई रास्ता निकल आएगा।
           </p>

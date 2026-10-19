@@ -57,18 +57,21 @@ function Donate() {
           </div>
         </div>
 
+        <div className="mt-8">
+          <a
+            className="btn-saffron"
+            href="https://razorpay.me/@probirme"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donate with card / UPI — Razorpay
+          </a>
+        </div>
+
         <div className="prose-block mt-8 max-w-2xl text-[0.98rem] text-ink-soft">
           <p>
-            Outside India?{" "}
-            <a
-              className="text-saffron underline"
-              href="https://github.com/sponsors/probir-sarkar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Sponsors
-            </a>{" "}
-            works with any card, or write to{" "}
+            Prefer a direct transfer? The UPI ID above works from any Indian app, or
+            write to{" "}
             <a className="underline" href="mailto:me@probirsarkar.com">me@probirsarkar.com</a> and I will
             find a way.
           </p>
